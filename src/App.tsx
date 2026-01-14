@@ -10,18 +10,29 @@ import SortSelector from "./components/SortSelector";
 import GameHeading from "./components/GameHeading";
 
 export interface GameQuery {
-  genre: Genre;
-  platform: Platform;
+  genre?: Genre;
+  platform?: Platform;
+  orderValue: string;
+  searchText: string;
+}
+
+//another way to simplified query key is keep gameQuery, create a gameQueryParams
+export interface GameQueryParams {
+  genreId?:number;
+  platformId?: number;
   orderValue: string;
   searchText: string;
 }
 
 function App() {
   const [gameQuery, setGameQuery] = useState<GameQuery>({} as GameQuery);
-  // const [selectedGenre, setSelectedGenre] = useState<Genre | null>(null);
-  // const [selectedPlatform, setSelectedPlatform] = useState<Platform | null>(
-  //   null
-  // );
+  
+  const gameQueryParams ={
+    genreId:gameQuery?.genre?.id,
+    platformId: gameQuery?.platform?.id,
+    orderValue: gameQuery.orderValue,
+    searchText:gameQuery.searchText,
+  }
 
   return (
     <Grid
@@ -64,7 +75,7 @@ function App() {
             />
           </HStack>
         </Box>
-        <GameGrid gameQuery={gameQuery} />
+        <GameGrid gameQueryParams={gameQueryParams} />
       </GridItem>
     </Grid>
   );

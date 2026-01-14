@@ -13,7 +13,7 @@ import getCroppedImageUrl from "../service/image-url";
 
 interface Props {
   onSelectedGenre: (genre: Genre) => void;
-  selectedGenre: Genre | null;
+  selectedGenre?: Genre;
 }
 
 const GenreList = ({ onSelectedGenre, selectedGenre }: Props) => {
