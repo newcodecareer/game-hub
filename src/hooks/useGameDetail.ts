@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import APIClient from "../service/api-client";
 import ms from "ms";
-import { FetchDetailResponse } from "../entities/FetchDetailResponse";
+import  FetchDetailResponse  from "../entities/FetchDetailResponse";
 
 const apiClient = new APIClient("/games");
 

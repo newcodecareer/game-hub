@@ -1,7 +1,7 @@
 import { SimpleGrid, Text } from "@chakra-ui/react";
 import CriticScore from "./CriticScore";
 import DefinitionItem from "./DefinitionItem";
-import { FetchDetailResponse } from "../entities/FetchDetailResponse";
+import FetchDetailResponse from "../entities/FetchDetailResponse";
 
 interface Props {
   data: FetchDetailResponse;

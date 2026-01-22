@@ -1,8 +1,8 @@
-import { Genre } from "./Genre";
-import { Platform } from "./Platform";
-import { publisher } from "./Publisher";
+import Genre from "./Genre";
+import Platform from "./Platform";
+import publisher  from "./Publisher";
 
-export interface FetchDetailResponse {
+export default interface FetchDetailResponse {
   id: number;
   slug: string;
   name: string;
